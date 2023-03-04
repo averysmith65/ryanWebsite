@@ -1,0 +1,23 @@
+.column.left {
+    float: left;
+    width: 50%;
+    
+}
+
+.column.right {
+    width: 50%;
+    float: right;
+    
+}
+
+.column {
+ float: inline-block;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    
+}
+
+

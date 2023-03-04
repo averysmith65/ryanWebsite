@@ -13,6 +13,20 @@ ul {
     display: flex;
 }
 
-.spacer {
-    flex: 1 1  auto;
+.row-size {
+    height: 175px;
+}
+
+
+img {
+    display: block;
+    
+    margin-right: auto;
+    height: 175px;
+    width: auto;
+    
+}
+
+.example-spacer {
+    flex: 1 1 auto;
 }

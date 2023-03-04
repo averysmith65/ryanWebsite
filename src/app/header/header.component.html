@@ -1,17 +1,36 @@
-<mat-toolbar color="primary">
-  <span>
-    <a routerLink="/">FootballFanalystsNetwork</a>
-  </span>
-    <span class="spacer"></span>
-    <ul>
-      <li>
-        <a mat-button routerLink="/create" routerLinkActive="mat-accent">New Post</a> 
-      </li>
-      <li>
-        <a mat-button routerLink="/login" routerLinkActive="mat-accent">Login</a> 
-      </li>
-      <li>
-        <a mat-button routerLink="/signup" routerLinkActive="mat-accent">Signup</a> 
-      </li>
-    </ul>
+<p>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row class="row-size">
+      <img  name="logo" routerLink="/" src="../../assets/logo.jpeg"><img/>
+    
+      
+    </mat-toolbar-row>
+    
+   
+    <mat-toolbar-row>
+      
+      <ul>
+        <li *ngIf="userIsAuthenticated">
+          <a mat-button routerLink="/create" routerLinkActive="mat-accent">New Post</a> 
+        </li>
+        <li *ngIf="!userIsAuthenticated">
+          <a mat-button routerLink="/login" routerLinkActive="mat-accent">Login</a> 
+        </li>
+        <li *ngIf="!userIsAuthenticated">
+          <a mat-button routerLink="/signup" routerLinkActive="mat-accent">Signup</a> 
+        </li>
+        <li *ngIf="userIsAuthenticated">
+          <button mat-button (click)="onLogout()">Logout</button> 
+        </li>
+      </ul>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar-row>
 </mat-toolbar>
+</p>
+
