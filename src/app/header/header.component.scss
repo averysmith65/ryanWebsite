@@ -1,7 +1,8 @@
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.icongroup {
+    float: right;
+    padding-top: 50px;
+    display: flex;
+    
 }
 
 a {
@@ -9,16 +10,12 @@ a {
     color: white;
 }
 
-ul {
-    display: flex;
-}
-
 .row-size {
     height: 175px;
 }
 
 
-img {
+.logo {
     display: block;
     
     margin-right: auto;
@@ -27,6 +24,10 @@ img {
     
 }
 
-.example-spacer {
-    flex: 1 1 auto;
+
+.icon {
+    color: white;
+    padding: 20px 20px;
+    width: 35;
+    height: 35;
 }

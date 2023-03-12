@@ -1,16 +1,21 @@
 <p>
   <mat-toolbar color="primary">
     <mat-toolbar-row class="row-size">
-      <img  name="logo" routerLink="/" src="../../assets/logo.jpeg"><img/>
-    
-      
-    </mat-toolbar-row>
-    
-   
-    <mat-toolbar-row>
-      
-      <ul>
-        <li *ngIf="userIsAuthenticated">
+      <img  class="logo" routerLink="/" src="../../assets/logo.jpeg"><img/>
+      <div class="icongroup">
+        <a href="https://www.facebook.com/FootballFanalystsNetwork" target="_blank">
+          <img  class="icon"  src="../../assets/facebook.svg"><img/>
+        </a>
+        <a href="https://www.youtube.com/@FootballFanalystsNetwork" target="_blank">
+          <img  class="icon"  src="../../assets/youtube.svg"><img/>
+        </a>
+        <a href="https://www.tiktok.com/@footballfanalystsnetwork" target="_blank">
+          <img  class="icon"  src="../../assets/tiktok.svg"><img/>
+        </a>
+        <a href="https://www.instagram.com/footballfanalystsnetwork/" target="_blank">
+          <img  class="icon"  src="../../assets/instagram.svg"><img/>
+        </a>
+        <!--<li *ngIf="userIsAuthenticated">
           <a mat-button routerLink="/create" routerLinkActive="mat-accent">New Post</a> 
         </li>
         <li *ngIf="!userIsAuthenticated">
@@ -21,15 +26,17 @@
         </li>
         <li *ngIf="userIsAuthenticated">
           <button mat-button (click)="onLogout()">Logout</button> 
-        </li>
-      </ul>
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-      </button>
+        </li>-->
+      </div>
+      
+    </mat-toolbar-row>
+    
+   
+    <mat-toolbar-row>
+    
+     
+      
+      
     </mat-toolbar-row>
 </mat-toolbar>
 </p>
