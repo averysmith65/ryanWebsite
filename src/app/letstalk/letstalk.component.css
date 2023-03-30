@@ -1,0 +1,27 @@
+.row {
+  padding-right: 1%;
+  padding-top: 10%;
+}
+  
+  .calindi.blurb {
+    text-align: center;
+  }
+
+    .calindi.blurb h1 {
+      font-family: "staatliches", serif;
+      color: #007F36;
+      font-size: 3vw;
+      letter-spacing: .3vw;
+      font-style: italic;
+    }
+
+    .calindi.blurb p {
+      font-family: "Assistant", serif;
+      font-size: 1.2vw;
+      word-spacing: 2.5px;
+      line-height: 1.5;
+    }
+    
+.calendly-inline-widget{
+  margin-bottom: 10%;
+}

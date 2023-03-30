@@ -1,3 +1,7 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
 .icongroup {
     float: right;
     padding-top: 50px;
@@ -17,9 +21,9 @@ a {
 
 .logo {
     display: block;
-    
+    padding-top: 3%;
     margin-right: auto;
-    height: 175px;
+    height: 115%;
     width: auto;
     
 }
@@ -30,4 +34,21 @@ a {
     padding: 20px 20px;
     width: 35;
     height: 35;
+}
+
+.button-group {
+    max-width: 20%;
+    padding-left: 36%;
+   
+    
+}
+
+.button-group .button {
+    color: white;
+    padding: 15%;
+}
+
+.button-group .button:hover {
+    background-color: white;
+    color: #007F36; /* Ryan's Green */
 }

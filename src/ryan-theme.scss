@@ -1,0 +1,59 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+/* For use in src/lib/core/theming/_palette.scss */
+$ryan-green-palette: (
+    50 : #e0f0e7,
+    100 : #b3d9c3,
+    200 : #80bf9b,
+    300 : #4da572,
+    400 : #269254,
+    500 : #007f36,
+    600 : #007730,
+    700 : #006c29,
+    800 : #006222,
+    900 : #004f16,
+    A100 : #82ff98,
+    A200 : #4fff6e,
+    A400 : #1cff44,
+    A700 : #03ff2f,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+$css-variables-material-primary: mat.define-palette($ryan-green-palette);
+$css-variables-material-accent: mat.define-palette(mat.$grey-palette,50);
+
+// The "warn" palette is optional and defaults to red if not specified.
+$css-variables-material-warn: mat.define-palette(mat.$red-palette);
+
+$css-variables-material-theme: mat.define-light-theme((
+ color: (
+   primary: $css-variables-material-primary,
+   accent: $css-variables-material-accent,
+   warn: $css-variables-material-warn,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+@include mat.all-component-themes($css-variables-material-theme);
+
+@include mat.button-theme($css-variables-material-theme);

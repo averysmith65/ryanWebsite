@@ -1,23 +1,47 @@
+
+@media screen and (max-width: 600px) {
+    .column.left .column.right{
+      width: 100%;
+    }
+  }
+
 .column.left {
     float: left;
     width: 50%;
-    
 }
 
 .column.right {
+    padding-top: 2%;;
     width: 50%;
     float: right;
     
 }
 
-.column {
- float: inline-block;
+
+
+p {
+    padding-left: 5%;
+    padding-right: 7%;
+    font-family: "Assistant", sans-serif, serif;
+      font-size: .9vw;
+      text-indent: 50px;
+      word-spacing: 2.5px;
+      line-height: 1.5;
 }
 
+h1 {
+    padding-left: 5%;
+    font-family: "staatliches", serif;
+    color: #007F36;
+    font-size: 3.5vw;
+    letter-spacing: 2px;
+}
 img {
-    width: 100%;
+    width: 35vw;
     height: auto;
-    
+    margin-right: 3%;
+    margin-top: 5%;
+    margin-left: 10%;
+    border-radius: 5%;
 }
-
 

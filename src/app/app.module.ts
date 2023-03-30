@@ -13,6 +13,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,10 @@ import { ErrorInterceptor } from './error-interceptor';
 import { ErrorComponent } from './error/error.component';
 import { BioComponent } from './posts/bio/bio.component';
 import { YoutubeComponent } from './youtube/youtube.component';
+import { MerchComponent } from './merch/merch.component';
+import { LetstalkComponent } from './letstalk/letstalk.component';
+import { DraftgComponent } from './draftg/draftg.component';
+
 
 
 @NgModule({
@@ -38,7 +43,10 @@ import { YoutubeComponent } from './youtube/youtube.component';
     SignupComponent,
     ErrorComponent,
     BioComponent,
-    YoutubeComponent
+    YoutubeComponent,
+    MerchComponent,
+    LetstalkComponent,
+    DraftgComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +63,8 @@ import { YoutubeComponent } from './youtube/youtube.component';
     HttpClientModule,
     MatPaginatorModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    MatTabsModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},

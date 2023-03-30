@@ -1,3 +1,8 @@
+<div class="bio">
+<app-bio></app-bio>
+</div>
+
+<h1> Straight To the Punt: The Cliffnotes</h1>
 
 <div>
 <mat-spinner *ngIf="isLoading"></mat-spinner>
@@ -19,4 +24,8 @@
 <mat-paginator [length]="totalPosts" [pageSize]="postsPerPage" [pageSizeOptions]="pageSizeOptions" (page)="onChangedPage($event)"
   *ngIf="posts.length > 0"></mat-paginator>
 <p class="info-text mat-body-1" *ngIf="posts.length <= 0 && !isLoading">No posts added yet!</p>
+</div>
+
+<div class="youtube">
+  <app-youtube></app-youtube>
 </div>
