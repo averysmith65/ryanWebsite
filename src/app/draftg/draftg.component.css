@@ -1,0 +1,23 @@
+h1 {
+  font-family: "staatliches", serif;
+  color: #007F36;
+  font-size: 4.5dvw;
+  letter-spacing: .2vw;
+  font-style: italic;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Assistant", serif;
+  font-size: 1.5vw;
+  word-spacing: 2.5px;
+  text-align: center;
+}
+
+.dogimg {
+  border-radius: 60px;
+  max-width: 50%;
+  height: auto;
+  margin-left: 30%; 
+  margin-top: 5%;
+}

@@ -6,6 +6,9 @@ import { PostCreateComponent } from "./posts/post-create/post-create.component";
 import { LoginComponent } from "./auth/login/login.component";
 import { SignupComponent } from "./auth/signup/signup.component";
 import { AuthGuard } from "./auth/auth.guard";
+import { MerchComponent } from "./merch/merch.component";
+import { LetstalkComponent } from "./letstalk/letstalk.component";
+import { DraftgComponent } from "./draftg/draftg.component";
 
 const routes: Routes = [
   { path: "", component: PostListComponent },
@@ -13,6 +16,9 @@ const routes: Routes = [
   { path: "edit/:postId", component: PostCreateComponent, canActivate: [AuthGuard] },
   { path: "login", component: LoginComponent },
   { path: "signup", component: SignupComponent },
+  { path: "merch", component: MerchComponent},
+  { path: "letstalk", component: LetstalkComponent},
+  { path: "draftg", component: DraftgComponent}
 ];
 
 @NgModule({
