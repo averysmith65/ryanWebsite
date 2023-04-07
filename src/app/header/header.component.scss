@@ -6,6 +6,7 @@
     float: right;
     padding-top: 50px;
     display: flex;
+    margin-left: auto;
     
 }
 
@@ -20,11 +21,12 @@ a {
 
 
 .logo {
-    display: block;
+    float: left;;
     padding-top: 3%;
-    margin-right: auto;
-    height: 115%;
+    
+    max-height: 190px;
     width: auto;
+    cursor: pointer;
     
 }
 
@@ -51,4 +53,17 @@ a {
 .button-group .button:hover {
     background-color: white;
     color: #007F36; /* Ryan's Green */
+}
+
+.dropdown {
+    float: right;
+    margin-left: auto;
+}
+
+.mat-menu-content {
+    background-color: #007F36 !important;
+  }
+
+.dicon {
+    color: #007F36;
 }

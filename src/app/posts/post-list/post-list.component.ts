@@ -6,6 +6,8 @@ import { Post } from "../post.model";
 import { PostsService } from "../posts.service";
 import { AuthService } from "../../auth/auth.service";
 
+import { BreakpointObserver, Breakpoints, } from '@angular/cdk/layout';
+
 @Component({
   selector: "app-post-list",
   templateUrl: "./post-list.component.html",
@@ -23,10 +25,38 @@ export class PostListComponent implements OnInit, OnDestroy {
   private postsSub: Subscription;
   private authStatusSub: Subscription;
 
+
+  cols = '1';
+
+    displayMap = new Map([
+      [Breakpoints.XSmall, '1'],
+      [Breakpoints.Small, '1'],
+      [Breakpoints.Medium, '1'],
+      [Breakpoints.Large, '1'],
+      [Breakpoints.XLarge, '1'],
+    ]);
+
+
   constructor(
     public postsService: PostsService,
-    private authService: AuthService
-  ) {}
+    private authService: AuthService,
+    breakpointObserver: BreakpointObserver
+  ) {
+    breakpointObserver.observe([
+      Breakpoints.XSmall,
+      Breakpoints.Small,
+      Breakpoints.Medium,
+      Breakpoints.Large,
+      Breakpoints.XLarge,
+    ]).subscribe(result =>{
+      for(const query of Object.keys(result.breakpoints)) {
+        if (result.breakpoints[query]) {
+          this.cols = this.displayMap.get(query) as string;
+        }
+      }
+    })
+  };
+  
 
   ngOnInit() {
     this.isLoading = true;

@@ -14,6 +14,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
+import { LayoutModule } from '@angular/cdk/layout';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatDividerModule} from '@angular/material/divider';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -64,7 +70,11 @@ import { DraftgComponent } from './draftg/draftg.component';
     MatPaginatorModule,
     MatDialogModule,
     MatIconModule,
-    MatTabsModule
+    MatTabsModule,
+    LayoutModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatDividerModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},

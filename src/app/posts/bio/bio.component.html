@@ -1,8 +1,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches|Assistant">
-<div class="row">
-  <div class="column left">
-    <h1>Ryan Podnar here...</h1>  
-    <p headline-1> My name is Ryan Podnar and I am the founder of Football Fanalysts Network.
+<h1>Ryan Podnar here...</h1>
+
+<mat-grid-list [cols]="cols"  gutterSize = 3px>
+   <mat-grid-tile>
+      
+         <p [style.font-size]="fontSize">
+       My name is Ryan Podnar and I am the founder of Football Fanalysts Network.
        I’ve been playing fantasy football for a decade now and became obsessed with it almost 
        instantly. I’ve spent years and years doing in-depth research and finding the best, most 
        efficient ways to win fantasy championships through trial and error. When I started my YouTube 
@@ -17,13 +20,15 @@
        draft guide, the “let’s talk” feature (1 on 1 session with me), and links to my YouTube videos. 
        Thank you for visiting FootballFanalystsNetwork.com, and most importantly, let’s dominate fantasy 
        football together!
-    </p> 
-  </div>
-  <div class="column right">
-      <img  src="../../../assets/ryanbiopic.JPG">
-  </div>
-</div>
-
-
+      </p>
     
   
+   </mat-grid-tile>
+    
+
+  
+   <mat-grid-tile>
+      <img  src="../../../assets/ryanbiopic.JPG">
+   </mat-grid-tile>
+
+</mat-grid-list>
