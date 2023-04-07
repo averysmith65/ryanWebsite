@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 
-declare let Calendly: any;
+//declare let Calendly: any;
 
 @Component({
   selector: 'app-letstalk',

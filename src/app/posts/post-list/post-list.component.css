@@ -4,7 +4,7 @@ h1{
     font-size: 2.5vw;
     letter-spacing: 1.3px;    
     color: #007F36; /* Ryan's Green */
-    padding-top: 3%;
+
   }
 
 
@@ -42,10 +42,9 @@ mat-paginator {
     margin-top: 1rem;
 }
 
-.bio {
-    padding-bottom: 40%;
+.bio{
+    padding-bottom: 5%;
 }
-
 .youtube{
     padding-top: 5%;
 }

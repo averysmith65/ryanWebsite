@@ -1,36 +1,69 @@
+
 <p>
   <mat-toolbar color="primary">
 
     <mat-toolbar-row class="row-size">
-      <img  class="logo" routerLink="/" src="../../assets/logo.jpeg"><img/>
-      <div class="icongroup">
-        <a href="https://www.facebook.com/FootballFanalystsNetwork" target="_blank">
-          <img  class="icon"  src="../../assets/facebook.svg"><img/>
-        </a>
-        <a href="https://www.youtube.com/@FootballFanalystsNetwork" target="_blank">
-          <img  class="icon"  src="../../assets/youtube.svg"><img/>
-        </a>
-        <a href="https://www.tiktok.com/@footballfanalystsnetwork" target="_blank">
-          <img  class="icon"  src="../../assets/tiktok.svg"><img/>
-        </a>
-        <a href="https://www.instagram.com/footballfanalystsnetwork/" target="_blank">
-          <img  class="icon"  src="../../assets/instagram.svg"><img/>
-        </a>
-        <!--<li *ngIf="userIsAuthenticated">
-          <a mat-button routerLink="/create" routerLinkActive="mat-accent">New Post</a> 
-        </li>
-        <li *ngIf="!userIsAuthenticated">
-          <a mat-button routerLink="/login" routerLinkActive="mat-accent">Login</a> 
-        </li>
-        <li *ngIf="!userIsAuthenticated">
-          <a mat-button routerLink="/signup" routerLinkActive="mat-accent">Signup</a> 
-        </li>-->
-        <li *ngIf="userIsAuthenticated">
-          <button mat-button (click)="onLogout()">Logout</button> 
-        </li>
-      </div>
+
+      <img  class="logo" routerLink="/" src="../../assets/logo.jpeg" target="_blank"><img/>
+
+      <ng-container *ngIf="isSmallScreen$ | async">
+          <div class="icongroup">
+           <a href="https://www.facebook.com/FootballFanalystsNetwork" target="_blank">
+              <img  class="icon"  src="../../assets/facebook.svg"><img/>
+            </a>
+            <a href="https://www.youtube.com/@FootballFanalystsNetwork" target="_blank">
+              <img  class="icon"  src="../../assets/youtube.svg"><img/>
+            </a>
+            <a href="https://www.tiktok.com/@footballfanalystsnetwork" target="_blank">
+              <img  class="icon"  src="../../assets/tiktok.svg"><img/>
+             </a>
+            <a href="https://www.instagram.com/footballfanalystsnetwork/" target="_blank">
+              <img  class="icon"  src="../../assets/instagram.svg"><img/>
+            </a>
+              <!--<li *ngIf="userIsAuthenticated">
+                <a mat-button routerLink="/create" routerLinkActive="mat-accent">New Post</a> 
+              </li>
+              <li *ngIf="!userIsAuthenticated">
+                <a mat-button routerLink="/login" routerLinkActive="mat-accent">Login</a> 
+              </li>
+              <li *ngIf="!userIsAuthenticated">
+                <a mat-button routerLink="/signup" routerLinkActive="mat-accent">Signup</a> 
+              </li>
+              <li *ngIf="userIsAuthenticated">
+                <button mat-button (click)="onLogout()">Logout</button> 
+              </li>-->
+          </div>
+        </ng-container>
       
-    </mat-toolbar-row>
+        <ng-container *ngIf="isWideScreen$ | async">
+        <button mat-icon-button class="dropdown"[matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu  #menu="matMenu" backdropClass="customize">
+          <button mat-menu-item class="dicon">
+            <a href="https://www.facebook.com/FootballFanalystsNetwork" target="_blank">
+              <img  class="icon"  src="../../assets/facebook 2.svg"><img/>
+            </a>
+          </button>
+          <button mat-menu-item class="dicon">
+            <a href="https://www.youtube.com/@FootballFanalystsNetwork" target="_blank">
+              <img  class="icon"  src="../../assets/youtube 2.svg"><img/>
+            </a>
+          </button>
+          <button mat-menu-item class="dicon">
+            <a href="https://www.tiktok.com/@footballfanalystsnetwork" target="_blank">
+              <img  class="icon"  src="../../assets/tiktok 2.svg"><img/>
+             </a>
+          </button>
+          <button mat-menu-item class="dicon">
+            <a href="https://www.instagram.com/footballfanalystsnetwork/" target="_blank">
+              <img  class="icon"  src="../../assets/instagram 2.svg"><img/>
+            </a>
+          </button>
+        </mat-menu>
+      </ng-container>
+      </mat-toolbar-row>
+
 
 
     <mat-toolbar-row>
@@ -45,4 +78,3 @@
 
 </mat-toolbar>
 </p>
-
