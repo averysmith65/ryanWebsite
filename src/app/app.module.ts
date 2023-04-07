@@ -14,12 +14,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
-import { LayoutModule } from '@angular/cdk/layout';
 import {MatGridListModule} from '@angular/material/grid-list';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatDividerModule} from '@angular/material/divider';
-
-
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +33,7 @@ import { YoutubeComponent } from './youtube/youtube.component';
 import { MerchComponent } from './merch/merch.component';
 import { LetstalkComponent } from './letstalk/letstalk.component';
 import { DraftgComponent } from './draftg/draftg.component';
+
 
 
 
@@ -71,10 +69,9 @@ import { DraftgComponent } from './draftg/draftg.component';
     MatDialogModule,
     MatIconModule,
     MatTabsModule,
-    LayoutModule,
+    YouTubePlayerModule,
     MatGridListModule,
-    MatMenuModule,
-    MatDividerModule
+    MatMenuModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
