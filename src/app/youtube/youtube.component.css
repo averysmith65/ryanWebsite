@@ -1,41 +1,12 @@
 
-@media screen and (max-width: 600px) {
-  .card-row{
-    width: 100%;
-  }
+ .mat-grid-tile {
+  background-color: aqua;
 }
 
-
-.card-row{
-padding-left: 2%;
-padding-bottom: 15%;
+h1{
+  text-align: center;
+  font-family: "staatliches", serif;
+  font-size: 2.5vw;
+  letter-spacing: 1.3px;    
+  color: #007F36; /* Ryan's Green */
 }
-
-.card-group {
-  float: left;
-  width:33.3%;
-}
-
-.card-group:after{
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.cards{
-    max-width: 95%;  
-    height: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 127, 54, 0.4), 0 6px 20px 0 rgba(0, 127, 54, 0.23);
-  }
-  
-  .title{
-    font-size: 1vw;
-  }
-  .cards p{
-    font-size: .8vw;
-  }
-  
-  .example-header-image{
-    background-image: src"../assets/logo.jpg";
-    background-size: cover;
-  }
