@@ -18,6 +18,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 //import { YouTubePlayerModule } from '@angular/youtube-player';
 import { MatMenuModule } from '@angular/material/menu';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostCreateComponent } from './posts/post-create/post-create.component';
@@ -33,6 +34,7 @@ import { YoutubeComponent } from './youtube/youtube.component';
 import { MerchComponent } from './merch/merch.component';
 import { LetsTalkComponent } from './letstalk/letstalk.component';
 import { DraftgComponent } from './draftg/draftg.component';
+import { FetchAPIComponent } from './fetch-api/fetch-api.component';
 
 
 
@@ -50,7 +52,8 @@ import { DraftgComponent } from './draftg/draftg.component';
     YoutubeComponent,
     MerchComponent,
     LetsTalkComponent,
-    DraftgComponent
+    DraftgComponent,
+    FetchAPIComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +74,7 @@ import { DraftgComponent } from './draftg/draftg.component';
     MatTabsModule,
     MatGridListModule,
     MatMenuModule
+    
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},

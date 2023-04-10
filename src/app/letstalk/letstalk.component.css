@@ -19,6 +19,11 @@
       line-height: 1.5;
     }
     
+.calendly-inline-widget{
+  margin-bottom: 10%;
+}
+
+
     .container {
       position: relative;
       overflow: hidden;
