@@ -7,7 +7,7 @@ import { LoginComponent } from "./auth/login/login.component";
 import { SignupComponent } from "./auth/signup/signup.component";
 import { AuthGuard } from "./auth/auth.guard";
 import { MerchComponent } from "./merch/merch.component";
-import { LetstalkComponent } from "./letstalk/letstalk.component";
+import { LetsTalkComponent } from "./letstalk/letstalk.component";
 import { DraftgComponent } from "./draftg/draftg.component";
 
 const routes: Routes = [
@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "signup", component: SignupComponent },
   { path: "merch", component: MerchComponent},
-  { path: "letstalk", component: LetstalkComponent},
+  { path: "letstalk", component: LetsTalkComponent},
   { path: "draftg", component: DraftgComponent}
 ];
 

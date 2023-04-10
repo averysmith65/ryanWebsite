@@ -1,5 +1,5 @@
 
-<p>
+
   <mat-toolbar color="primary">
 
     <mat-toolbar-row class="row-size">
@@ -36,10 +36,10 @@
         </ng-container>
       
         <ng-container *ngIf="isWideScreen$ | async">
-        <button mat-icon-button class="dropdown"[matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <button mat-icon-button class="dropdown"[matMenuTriggerFor]="belowMenu" aria-label="Example icon-button with a menu">
           <mat-icon>more_vert</mat-icon>
         </button>
-        <mat-menu  #menu="matMenu" backdropClass="customize">
+        <mat-menu  #belowMenu="matMenu" yPosition="below">
           <button mat-menu-item class="dicon">
             <a href="https://www.facebook.com/FootballFanalystsNetwork" target="_blank">
               <img  class="icon"  src="../../assets/facebook 2.svg"><img/>
@@ -63,18 +63,19 @@
         </mat-menu>
       </ng-container>
       </mat-toolbar-row>
+  
 
-
-
-    <mat-toolbar-row>
-
-       <div class="button-group">
-        <a mat-button class="button" routerLink="/letstalk"> Let's Talk</a> 
-        <a mat-button class="button" routerLink="/draftg"> Draft Guide</a>
-        <a mat-button class="button" routerLink="/merch"> Merch</a>
-      </div>
-
+    <mat-toolbar-row class="rowtwo">
+    
+            <div class="button-group" >
+         
+            <a mat-button class="button" routerLink="/letstalk"> Let's Talk</a> 
+            <a mat-button class="button" routerLink="/draftg"> Draft Guide</a>
+            <a mat-button class="button" routerLink="/merch"> Merch</a>
+            </div>
+       
     </mat-toolbar-row>
+    
 
 </mat-toolbar>
-</p>
+

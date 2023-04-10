@@ -1,15 +1,18 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches|Assistant">
 <h1> Checkout My Latest Youtube Videos</h1>
 
-<mat-grid-list [cols]="cols" rowHeight:fixed>
+<mat-grid-list [cols]="cols" [rowHeight]="rowHeight" [gutterSize]='gutterSize'>
   <div class="vids">
-    <mat-grid-tile>VID1</mat-grid-tile>
-    <mat-grid-tile>VID2</mat-grid-tile>
-    <mat-grid-tile>VID3</mat-grid-tile>
+    <mat-grid-tile>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/IyEf80-KQ2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dJuCw0zbYv8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/QCoIKzUv0AA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </mat-grid-tile>
+    
   </div>
-
 </mat-grid-list>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dJuCw0zbYv8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QCoIKzUv0AA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bzdhIz8Cgpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+  

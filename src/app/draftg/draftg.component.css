@@ -12,12 +12,18 @@ h3 {
   font-size: 1.5vw;
   word-spacing: 2.5px;
   text-align: center;
+  padding-top: 3%;
+  margin: 0;
 }
 
-.dogimg {
-  border-radius: 60px;
-  max-width: 50%;
-  height: auto;
-  margin-left: 30%; 
-  margin-top: 5%;
+.draft-guide {
+  width: auto;
+  height: 100%;
+
+}
+
+p{
+  text-align: center;
+  padding-top: 2%;
+  font-size: 1.5vw;
 }
