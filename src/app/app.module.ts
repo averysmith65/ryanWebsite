@@ -15,7 +15,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { YouTubePlayerModule } from '@angular/youtube-player';
+//import { YouTubePlayerModule } from '@angular/youtube-player';
 import { MatMenuModule } from '@angular/material/menu';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -31,7 +31,7 @@ import { ErrorComponent } from './error/error.component';
 import { BioComponent } from './posts/bio/bio.component';
 import { YoutubeComponent } from './youtube/youtube.component';
 import { MerchComponent } from './merch/merch.component';
-import { LetstalkComponent } from './letstalk/letstalk.component';
+import { LetsTalkComponent } from './letstalk/letstalk.component';
 import { DraftgComponent } from './draftg/draftg.component';
 
 
@@ -49,7 +49,7 @@ import { DraftgComponent } from './draftg/draftg.component';
     BioComponent,
     YoutubeComponent,
     MerchComponent,
-    LetstalkComponent,
+    LetsTalkComponent,
     DraftgComponent
   ],
   imports: [
@@ -69,7 +69,6 @@ import { DraftgComponent } from './draftg/draftg.component';
     MatDialogModule,
     MatIconModule,
     MatTabsModule,
-    YouTubePlayerModule,
     MatGridListModule,
     MatMenuModule
   ],

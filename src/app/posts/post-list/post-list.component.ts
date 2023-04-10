@@ -40,9 +40,12 @@ export class PostListComponent implements OnInit, OnDestroy {
   constructor(
     public postsService: PostsService,
     private authService: AuthService,
-    breakpointObserver: BreakpointObserver
-  ) {
-    breakpointObserver.observe([
+    private breakpointObserver: BreakpointObserver
+  ) {};
+  
+
+  ngOnInit() {
+    this.breakpointObserver.observe([
       Breakpoints.XSmall,
       Breakpoints.Small,
       Breakpoints.Medium,
@@ -55,10 +58,7 @@ export class PostListComponent implements OnInit, OnDestroy {
         }
       }
     })
-  };
-  
 
-  ngOnInit() {
     this.isLoading = true;
     this.postsService.getPosts(this.postsPerPage, this.currentPage);
     this.userId = this.authService.getUserId();
@@ -76,7 +76,7 @@ export class PostListComponent implements OnInit, OnDestroy {
         this.userIsAuthenticated = isAuthenticated;
         this.userId = this.authService.getUserId();
       });
-  }
+  };
 
   onChangedPage(pageData: PageEvent) {
     this.isLoading = true;
