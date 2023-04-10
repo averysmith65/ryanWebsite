@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches|Assistant">
-<h1>Ryan Podnar here...</h1>
+<h1 [style.font-size]="hFontSize">Ryan Podnar here...</h1>
 
-<mat-grid-list [cols]="cols"  gutterSize = 3px>
+<mat-grid-list [cols]="cols"  [gutterSize] = "gutterSize" [rowHeight]="rowHeight">
    <mat-grid-tile>
-      
+
          <p [style.font-size]="fontSize">
        My name is Ryan Podnar and I am the founder of Football Fanalysts Network.
        I’ve been playing fantasy football for a decade now and became obsessed with it almost 

@@ -10,13 +10,10 @@
     
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
 
 .row-size {
     height: 175px;
+    width: 100%;
 }
 
 
@@ -24,7 +21,7 @@ a {
     float: left;;
     padding-top: 3%;
     
-    max-height: 190px;
+    height: 100%;
     width: auto;
     cursor: pointer;
     
@@ -39,15 +36,23 @@ a {
 }
 
 .button-group {
-    max-width: 20%;
-    padding-left: 36%;
-   
-    
+    margin: auto;
+    display: inline-block;
+    left: 50%;
+  transform: translate(-50%);
+  
 }
+
+
+
 
 .button-group .button {
     color: white;
-    padding: 15%;
+    padding: 15% ;
+}
+
+.rowtwo{
+    padding-left: 50px;
 }
 
 .button-group .button:hover {
