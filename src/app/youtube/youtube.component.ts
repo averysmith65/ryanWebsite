@@ -19,6 +19,7 @@ export class YoutubeComponent implements OnInit {
   cols = '3';
   gutterSize = '7px';
   rowHeight = '500px';
+  hFontSize = '50px'
 
   unsubscribe$: ObservableInput<any>;
 
@@ -49,6 +50,15 @@ export class YoutubeComponent implements OnInit {
     [Breakpoints.Large, '500px'],
     [Breakpoints.XLarge, '500px'],
   ]);
+
+  hFontSizeMap = new Map([
+    [Breakpoints.XSmall, '30px'],
+    [Breakpoints.Small, '40px'],
+    [Breakpoints.Medium, '45px'],
+    [Breakpoints.Large, '50px'],
+    [Breakpoints.XLarge, '55px'],
+  ]);
+
   //videos: any[];
 ngOnInit() {
   
@@ -66,6 +76,7 @@ ngOnInit() {
         this.cols = this.displayMap.get(query) as string;
         this.gutterSize = this.gutterMap.get(query) as string;
         this.rowHeight = this.rowHeightMap.get(query) as string;
+        this.hFontSize = this.hFontSizeMap.get(query) as string;
       }
     }
   })

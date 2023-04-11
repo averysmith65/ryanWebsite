@@ -52,7 +52,7 @@ import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/co
   
     hFontSizeMap = new Map([
       [Breakpoints.XSmall, '30px'],
-      [Breakpoints.Small, '50px'],
+      [Breakpoints.Small, '45px'],
       [Breakpoints.Medium, '45px'],
       [Breakpoints.Large, '55px'],
       [Breakpoints.XLarge, '55px'],
