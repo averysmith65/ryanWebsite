@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import  axios  from 'axios';
+
 import { response } from 'express';
 
 @Component({

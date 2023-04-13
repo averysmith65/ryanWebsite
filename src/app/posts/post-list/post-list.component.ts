@@ -27,6 +27,7 @@ export class PostListComponent implements OnInit, OnDestroy {
 
 
   cols = '1';
+  hFontSize = '50px';
 
     displayMap = new Map([
       [Breakpoints.XSmall, '1'],
@@ -36,6 +37,13 @@ export class PostListComponent implements OnInit, OnDestroy {
       [Breakpoints.XLarge, '1'],
     ]);
 
+    hFontSizeMap = new Map([
+      [Breakpoints.XSmall, '30px'],
+      [Breakpoints.Small, '40px'],
+      [Breakpoints.Medium, '45px'],
+      [Breakpoints.Large, '50px'],
+      [Breakpoints.XLarge, '55px'],
+    ]);
 
   constructor(
     public postsService: PostsService,
@@ -55,6 +63,7 @@ export class PostListComponent implements OnInit, OnDestroy {
       for(const query of Object.keys(result.breakpoints)) {
         if (result.breakpoints[query]) {
           this.cols = this.displayMap.get(query) as string;
+          this.hFontSize = this.hFontSizeMap.get(query) as string;
         }
       }
     })
