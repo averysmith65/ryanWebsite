@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Sanitizer } from '@angular/core';
 import { BreakpointObserver, Breakpoints, } from '@angular/cdk/layout';
 import {interval, ObservableInput, takeUntil } from 'rxjs';
 import { FetchAPIComponent } from '../fetch-api/fetch-api.component';
+import { DomSanitizer } from "@angular/platform-browser"
+import fetch from 'node-fetch';
 import { Subscription } from "rxjs";
 //import { HttpClient } from '@angular/common/http';
 //import { Observable, throwError } from 'rxjs';
@@ -23,7 +25,7 @@ export class YoutubeComponent implements OnInit {
 
   unsubscribe$: ObservableInput<any>;
 
-  constructor(private breakpointObserver: BreakpointObserver, private FetchAPIComponent: FetchAPIComponent) {
+  constructor(private breakpointObserver: BreakpointObserver, private FetchAPIComponent: FetchAPIComponent, private sanitizer:DomSanitizer) {
     
   };
   displayMap = new Map([
@@ -57,12 +59,59 @@ export class YoutubeComponent implements OnInit {
     [Breakpoints.Medium, '45px'],
     [Breakpoints.Large, '50px'],
     [Breakpoints.XLarge, '55px'],
-  ]);
+    ]);
 
-  //videos: any[];
-ngOnInit() {
+  i = 0;
+  vid1 = '';
+  vid2 = '';
+  vid3 = '';
+  url1 = 'https://www.youtube.com/embed/';
+  sUrl1 = '';
+  sUrl2 = '';
+  sUrl3 = '';
+  tUrl1;
+  tUrl2;
+  tUrl3;
+
+  async getVideoId() {
+    const response = await fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cid&maxResults=3&playlistId=PLvjQ7W5Y_v68h52mUW0NErYBKt0Nn2TDl&key=AIzaSyBMRQ-7Qlr1MKMafBTMpNO3IrnkSuneQ9c');
+    const data = await response.json();
+
+    this.vid1 = (data.items[0].contentDetails.videoId);
+    this.vid2 = (data.items[1].contentDetails.videoId);
+    this.vid3 = (data.items[2].contentDetails.videoId);
+
+    this.sUrl1 = this.url1 + this.vid1
+    this.sUrl2 = this.url1 + this.vid2
+    this.sUrl3 = this.url1 + this.vid3
+    this.tUrl1 = this.sanitizer.bypassSecurityTrustResourceUrl(this.sUrl1)
+    this.tUrl2 = this.sanitizer.bypassSecurityTrustResourceUrl(this.sUrl2)
+    this.tUrl3 = this.sanitizer.bypassSecurityTrustResourceUrl(this.sUrl3)
+  }
+
+  async ngOnInit() {
   
-  //interval(3000).subscribe(x => )
+    const response = await fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cid&maxResults=3&playlistId=PLvjQ7W5Y_v68h52mUW0NErYBKt0Nn2TDl&key=AIzaSyBMRQ-7Qlr1MKMafBTMpNO3IrnkSuneQ9c');
+    const data = await response.json();
+
+    this.vid1 = (data.items[0].contentDetails.videoId);
+    this.vid2 = (data.items[1].contentDetails.videoId);
+    this.vid3 = (data.items[2].contentDetails.videoId);
+
+    
+
+    this.sUrl1 = this.url1 + this.vid1
+    this.sUrl2 = this.url1 + this.vid2
+    this.sUrl3 = this.url1 + this.vid3
+    this.tUrl1 = this.sanitizer.bypassSecurityTrustResourceUrl(this.sUrl1)
+    this.tUrl2 = this.sanitizer.bypassSecurityTrustResourceUrl(this.sUrl2)
+    this.tUrl3 = this.sanitizer.bypassSecurityTrustResourceUrl(this.sUrl3)
+    
+    console.log(this.url1 + this.vid1)
+
+      
+    
+  
   
   this.breakpointObserver.observe([
     Breakpoints.XSmall,
@@ -81,16 +130,13 @@ ngOnInit() {
     }
   })
 
-  //this.videos = [];
-  // this.FetchAPIComponent.getVideoID('AIzaSyAaKt6KoyLEs-1H1kKEFoA0NJIYxp9sjwI', 3)
-  // .pipe(takeUntil(this.unsubscribe$))
-  // .subscribe(lista => {
-  //   for (let element of lista["items"]) {
-  //     this.videos.push(element)
-  //   }
-  // })
+   setInterval(() => {
+     this.getVideoId();
+   }, 60000 * 60)
+
 
 
 }
  
 };
+

@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ryan-project",
+            "outputPath": "backend/ryan-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [

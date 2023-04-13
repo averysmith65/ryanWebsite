@@ -22,7 +22,7 @@ export class FetchAPIComponent {
 
   constructor(private http: HttpClient) {}
 
-  // apiKey : string = "AIzaSyBMRQ-7Qlr1MKMafBTMpNO3IrnkSuneQ9c";
+   apiKey : string = "AIzaSyBMRQ-7Qlr1MKMafBTMpNO3IrnkSuneQ9c";
 
   // readonly root_url = 'https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cid&maxResults=3&playlistId=PLvjQ7W5Y_v68h52mUW0NErYBKt0Nn2TDl&key=AIzaSyAaKt6KoyLEs-1H1kKEFoA0NJIYxp9sjwI';
 
@@ -33,35 +33,30 @@ export class FetchAPIComponent {
 
   //posts: any;
   //arr: any[] = []
-  ngOnInit() {
-    //this.getVideoID
+  async ngOnInit() {
+    // let api_key = "AIzaSyBMRQ-7Qlr1MKMafBTMpNO3IrnkSuneQ9c"; 
+    // const headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': `Bearer ${api_key}` }); 
+    // const requestOptions = { headers: headers }; 
+    // this.http.get('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cid&maxResults=3&playlistId=PLvjQ7W5Y_v68h52mUW0NErYBKt0Nn2TDl&key=', requestOptions)
+    // .subscribe((res: any) => { 
+    //   console.log(res); });
+
+      // const response = await fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cid&maxResults=3&playlistId=PLvjQ7W5Y_v68h52mUW0NErYBKt0Nn2TDl&key=AIzaSyBMRQ-7Qlr1MKMafBTMpNO3IrnkSuneQ9c');
+      // const data = await response.json();
+
+      // console.log(data.items[0].contentDetails.videoId);
+      // console.log(data.items[1].contentDetails.videoId);
+      // console.log(data.items[2].contentDetails.videoId);
+
   }
   
 
   // getVideoID(){
-    
-
-  //   this.http.get('https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&order=date&q=NFL&key=AIzaSyBMRQ-7Qlr1MKMafBTMpNO3IrnkSuneQ9c')
-  //   .subscribe(posts => {
-  //     console.log(posts)
-  //   });
-
-    
-
-  //   //this.posts.forEach(element => {
-  //   //console.log(element);
-  //   //});
-
-  // };
-    
   
 
   
 
   
 
-  //const response = await fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cid&maxResults=25&playlistId=PLvjQ7W5Y_v68h52mUW0NErYBKt0Nn2TDl&key=AIzaSyAaKt6KoyLEs-1H1kKEFoA0NJIYxp9sjwI HTTP/1.1');
-  //const data = await this.response.json();
-
-  //console.log(data);
+  
 }
