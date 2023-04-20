@@ -36,10 +36,12 @@
 }
 
 .button-group {
-    margin: auto;
-    display: inline-block;
-    left: 50%;
-  transform: translate(-50%);
+    inset-block-start: 0px;
+    inset-block-end: 70px;
+     margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   
 }
 
@@ -48,11 +50,12 @@
 
 .button-group .button {
     color: white;
-    padding: 15% ;
+    padding: 30px ;
 }
 
 .rowtwo{
-    padding-left: 50px;
+    position: relative;
+    height: 70px;
 }
 
 .button-group .button:hover {
